@@ -24,16 +24,16 @@ if($message['type']=='text'){
 	$msg_xpl = explode(" ", $msg_receive);
 	$keyword = $msg_xpl[0];
 
-	if($keyword=='/menu') {
+	if($keyword=='/help') {
 
 		$balas = array(
 			'replyToken' => $replyToken,                                                        
 			'messages' => array(
 				array(
 					'type' => 'text',                   
-					'text' => 'Perintah :
-					/menu : menampilkan menu
-					/hitung 3+3 : kalkulator'
+					'text' => '[Menu Command]
+/menu : menampilkan menu
+/hitung 3+3 : kalkulator'
 				)
 			)
 		);
