@@ -9,7 +9,7 @@ include "./Math/Stack.php";
 
 $client = new LINEBot($channelAccessToken, $channelSecret);
 
-$jam=date("H:i:s");
+
 $userId         = $client->parseEvents()[0]['source']['userId'];
 $replyToken     = $client->parseEvents()[0]['replyToken'];
 $timestamp      = $client->parseEvents()[0]['timestamp'];
@@ -24,7 +24,7 @@ if ($type == 'join'){
 		'messages' => array(
 			array(
 				'type' => 'text',                   
-				'text' => 'Time: '. $jam.'. Thx udh undang ke grup ini kakak:)'
+				'text' => 'Thx udh undang ke grup ini kakak:)'
 			)
 		)
 	);
