@@ -23,34 +23,33 @@ $type 		= $client->parseEvents()[0]['type'];
 
 if ($type == 'join'){
 	$balas = array(
-			'replyToken' => $replyToken,                                                        
-			'messages' => array(
-				array(
-					'type' => 'flex',
-					'altText' => 'fanisa cantid',
-					'contents' =>
-						array(
-							'type' => 'bubble',
-							'body' =>
-								array(
-									'type' => 'box',
-									'layout' => 'vertical',
-									'contents' =>
-										array(
-											0 =>
-												array(
-													'type' => 'text',
-													'text' => '[Jam: '. $jam.']'
-												),
-											1 =>
-												array(
-													'type' => 'text',
-													'text' => 'Thx udh di invite ke grup ini kakak:)'
-												)
-										)
-								)
-						)
-				)
+		'replyToken' => $replyToken,                                                        
+		'messages' => array(
+			array(
+				'type' => 'flex',
+				'altText' => 'fanisa cantid',
+				'contents' =>
+					array(
+						'type' => 'bubble',
+						'body' =>
+							array(
+								'type' => 'box',
+								'layout' => 'vertical',
+								'contents' =>
+									array(
+										0 =>
+											array(
+												'type' => 'text',
+												'text' => '[Jam: '. $jam.']'
+											),
+										1 =>
+											array(
+												'type' => 'text',
+												'text' => 'Thx udh di invite ke grup ini kakak:)'
+											)
+									)
+							)
+					)
 			)
 		)
 	);
