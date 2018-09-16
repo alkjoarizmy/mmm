@@ -17,7 +17,20 @@ $messageid      = $client->parseEvents()[0]['message']['id'];
 $profil         = $client->profil($userId);
 
 $msg_receive   = $message['text'];
+$type 		= $client->parseEvents()[0]['type'];
+if ($type == 'join'){
+	$balas = array(
+		'replyToken' => $replyToken,                                                        
+		'messages' => array(
+			array(
+				'type' => 'text',                   
+				'text' => 'Thx udh undang ke grup ini kakak:)'
+			)
+		)
+	);
 
+	$client->replyMessage($balas);
+},
 
 if($message['type']=='text'){
 
