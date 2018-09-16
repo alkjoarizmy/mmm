@@ -30,7 +30,7 @@ if ($type == 'join'){
 	);
 
 	$client->replyMessage($balas);
-},
+}
 
 if($message['type']=='text'){
 
