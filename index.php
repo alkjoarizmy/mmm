@@ -32,7 +32,7 @@ if($message['type']=='text'){
 				array(
 					'type' => 'text',                   
 					'text' => '[Menu Command]
-/menu : menampilkan menu
+/help : menampilkan menu
 /hitung 3+3 : kalkulator'
 				)
 			)
