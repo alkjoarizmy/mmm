@@ -56,5 +56,39 @@ if($message['type']=='text'){
 		);
 
 		$client->replyMessage($balas);
+	}elseif($keyword=='menu'){
+
+		$balas = array(
+			'replyToken' => $replyToken,                                                        
+			'messages' => array(
+				array(
+					'type' => 'flex',
+					'altText' => 'fanisa cantid',
+					'contents' =>
+						array(
+							'type' => 'bubble',
+							'body' =>
+								array(
+									'type' => 'box',
+									'layout' => 'vertical',
+									'contents' =>
+										array(
+											0 =>
+												array(
+													'type' => 'text',
+													'text' => 'ngtd'
+												),
+											1 =>
+												array(
+													'type' => 'text',
+													'text' => 'nganted'
+												),
+										),
+								),
+						),
+				),
+			),
+		);
+		$client->replyMessage($balas);
 	}
 }
