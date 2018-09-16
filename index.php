@@ -24,7 +24,7 @@ if ($type == 'join'){
 		'messages' => array(
 			array(
 				'type' => 'text',                   
-				'text' => 'Time: '. $jam.'Thx udh undang ke grup ini kakak:)'
+				'text' => 'Time: '. $jam.'. Thx udh undang ke grup ini kakak:)'
 			)
 		)
 	);
