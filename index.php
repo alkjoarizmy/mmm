@@ -135,4 +135,4 @@ if (isset($msg)) {
     file_put_contents('./balasan.json', $result);
 
     $client->replyMessage($balas);
-
+}
