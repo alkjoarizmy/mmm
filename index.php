@@ -21,6 +21,17 @@ $profil         = $client->profil($userId);
 $msg_receive   = $message['text'];
 $type 		= $client->parseEvents()[0]['type'];
 
+$pesan_datang = explode(" ", $message['text']);
+$options = $pesan_datang[1];
+
+function img_search($keyword) {
+    $uri = 'https://www.google.co.id/search?q=' . $keyword . '&safe=off&source=lnms&tbm=isch';
+    $response = Unirest\Request::get("$uri");
+    $hasil = str_replace(">", "&gt;", $response->raw_body);
+    $arrays = explode("<", $hasil);
+    return explode('"', $arrays[291])[3];
+}
+
 if ($type == 'join'){
 	$balas = array(
 		'replyToken' => $replyToken,                                                        
@@ -45,7 +56,7 @@ if ($type == 'join'){
 										1 =>
 											array(
 												'type' => 'text',
-												'text' => 'Thx udh invite aku kesini:)'
+												'text' => 'Thx udh di invite ke grup ini kakak:)'
 											)
 									)
 							)
@@ -147,6 +158,19 @@ if($message['type']=='text'){
 					'text' => 'tis'
 				),
 			),
+		);
+		$client->replyMessage($balas);
+	}elseif($keyword=='imgsearch'){
+		$hasil = img_search($options);
+		$balas = array(
+			'replyToken' => $replyToken,
+			'messages' => array(
+				array(
+					'type' => 'image',
+					'originalContentUrl' => $hasil,
+					'previewImageUrl' => $hasil
+				)
+			)
 		);
 		$client->replyMessage($balas);
 	}
