@@ -56,7 +56,7 @@ if($message['type']=='text'){
 		);
 
 		$client->replyMessage($balas);
-	}elseif($keyword=='menu'){
+	}elseif($keyword=='/help'){
 
 		$balas = array(
 			'replyToken' => $replyToken,                                                        
@@ -76,12 +76,12 @@ if($message['type']=='text'){
 											0 =>
 												array(
 													'type' => 'text',
-													'text' => 'ngtd'
+													'text' => 'Command List:'
 												),
 											1 =>
 												array(
 													'type' => 'text',
-													'text' => 'nganted'
+													'text' => '> /hitung'
 												),
 										),
 								),
