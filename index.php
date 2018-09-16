@@ -45,7 +45,7 @@ if ($type == 'join'){
 										1 =>
 											array(
 												'type' => 'text',
-												'text' => 'Thx udh di invite ke grup ini kakak:)'
+												'text' => 'Thx udh invite aku kesini:)'
 											)
 									)
 							)
